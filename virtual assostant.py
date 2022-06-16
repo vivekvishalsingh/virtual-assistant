@@ -7,7 +7,7 @@ import os
 
 print("Initializing Max")
 
-MASTER = "vivek"
+MASTER = "Sir"
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -65,26 +65,20 @@ def main():
     elif 'open youtube' in query.lower():
         #webbrowser.open("youtube.com")
         url = "youtube.com"
-        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+        chrome_path = 'Your chrome location'
         webbrowser.get(chrome_path).open(url)
 
     elif 'open google' in query.lower():
         #webbrowser.open("google.com")
         url = "google.com"
-        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+        chrome_path = 'Your chrome location'
         webbrowser.get(chrome_path).open(url)
-
-    elif 'play music' in query.lower():
-        songs_dir = "D:\\song"
-        songs = os.listdir(songs_dir)
-        print(songs)
-        os.startfile(os.path.join(songs_dir, songs[0]))
 
     elif 'what is the time' in query.lower():
         strTime = datetime.datetime.now().strftime("%H:%M:%S")
         speak(f"{MASTER} the time is {strTime}") 
 
     elif 'open code' in query.lower():
-        codePath = "C:\\Users\\viveak\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+        codePath = "Your vscode file location"
         os.startfile(codePath)
 main()        
